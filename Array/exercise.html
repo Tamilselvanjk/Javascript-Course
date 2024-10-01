@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array exercise</title>
+</head>
+<body>
+    <script>
+        //array method
+        let arr =[5,8,10,7,9,11]
+
+        //splice-replace
+        arr.splice(3,3,'17','19','111') 
+        console.log(arr);
+        
+        //unshift - beginig insert value
+        arr.unshift('100')
+        console.log(arr);
+
+        //splice insert last but one position
+        arr.splice(arr.length-1,0,200)
+        console.log(arr);
+
+        //push- insert last value
+        arr.push('1000') 
+        console.log(arr);
+
+        //insert middle 0 used mathfloor,splice
+        let middleIndex = (arr.length / 2)
+        arr.splice(middleIndex,0,0) 
+       console.log(arr);
+        </script>
+    
+</body>
+</html>

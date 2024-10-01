@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+    // 2 dimention array
+    let matrix = [[3,4.5],[7,6,8],[9,10,11]]
+    console.log(matrix[1][2]);
+
+    console.log(matrix.slice(0 ,2))
+    //join - convert array to string
+    let arr = ['t','a','m'];
+    let joined = arr.join()
+    console.log(joined);
+
+    // split - convert string to array
+    let str = "L,a,x"
+    let str1 = str.split(',');
+    console.log(str1);
+
+    //sperad operator
+    let first =[1,2,3]
+    let second =[4,5,6]
+    join = [...first,...second]
+    console.log(join);
+
+    //concat operator
+    join =first.concat(second)
+    console.log(join);
+
+  //array method
+  let array = ['a','b','c','d','e']
+ 
+  //shift - remove element from start of the array
+  console.log(array.shift());
+
+  //unshift - add element form start of the value
+  console.log(array.unshift('t'));
+  console.log(array);
+
+  //splice 
+  array.splice(2,2)
+  console.log(array);
+
+  array.splice(1,1,'m')
+  console.log(array);
+
+  array.splice(2,2,'i','l')
+  console.log(array);
+
+  array.splice(1,0,'a')
+  console.log(array)
+
+  //slice (start index,end index)
+  console.log(array.slice(-3,-1));
+  </script>
+
+</body>
+</html>

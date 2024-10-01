@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Type </title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Type a Sentence</h2>
+    
+    <div class="inputdiv">
+        <textarea name="text" id="input" cols="35" rows="15"></textarea>
+    </div>
+    <div>
+        <button type="sumbit" onclick="countWord()">calculated Word</button>
+    </div>
+
+    <div id="output">
+
+    </div>
+    </div>
+    <script>
+        function countWord(){ 
+        const sentence= document.getElementById('input').value;
+        const calWord = sentence.split('').length;
+        const wordOp = document.getElementById('output');
+        wordOp.innerText= "Wordcount : " + calWord;
+        }
+
+        
+        
+
+    </script>
+</body>
+</html>

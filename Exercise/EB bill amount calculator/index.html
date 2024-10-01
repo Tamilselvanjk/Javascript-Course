@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EB bill amount calculator </title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>EB bill amount calculator</h2>
+    
+    <div class="inputdiv">
+        <input type="text" id="input" placeholder="EB bill amount calculator">
+    </div>
+    <div>
+        <button type="sumbit" onclick="billCal()">calculator</button>
+    </div>
+
+    <div id="result">
+
+    </div>
+    </div>
+    <script>
+        function billCal(){   
+        const unit = Number(document.getElementById("input").value);
+        let amount= 0;
+        
+        if (unit <= 50){
+            amount= unit*0.75;
+        }
+        else if (unit > 50 && unit <= 100){
+            amount= (unit - 50) * 1.00 + (50 * 0.75);
+        }
+        else if (unit>100 && unit<=250){
+            amount= (unit-100)*1.30+(50*0.75)+(50*1.00);
+        }
+        else{
+            amount= (unit-250)*1.50 +(50*0.75)+(50*1.00)+(150*1.30);
+        }
+        
+        
+        const result = document.getElementById("result");
+        result.innerHTML = `"your changes for the" ${unit} "is" ${amount.toFixed(1)}`;
+        }
+    </script>
+</body>
+</html>

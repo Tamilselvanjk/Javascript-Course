@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator without button</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="expression" placeholder="Enter expression like 5+9">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            const input = document.getElementById('expression').value;
+            const regex = /^(\d+)([+\-*/])(\d+)$/;
+            const match = input.match(regex);
+            
+
+            if (match) {
+                //convert "5" to the number 5
+                const operand1 = parseFloat(match[1]);
+
+                //operator is "+"
+                const operator = match[2];
+
+                //convert "9" to the number 9
+                const operand2 = parseFloat(match[3]);
+                
+                //perform calculator based on operator
+                let result = 0;
+
+                switch (operator) {
+                    case '+': result = operand1 + operand2; break;
+                    case '-': result = operand1 - operand2; break;
+                    case '*': result = operand1 * operand2; break;
+                    case '/': result = operand1 / operand2; break;
+                    default: result = "Invalid operator";
+                }
+
+                document.getElementById('result').innerText =` Result: ${result}`;
+            } else {
+                document.getElementById('result').innerText = 'Invalid input format';
+            }
+        }
+    </script>
+</body>
+</html>

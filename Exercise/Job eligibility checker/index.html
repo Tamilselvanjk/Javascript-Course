@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job eligibility checker</title>
+</head>
+
+<body>
+    <h1>Job eligibility checker</h1>
+    <form id="eligibility">
+        <label>
+            <input type="radio" name="education" value="Illiterate">Illiterate
+        </label><br>
+        <label>
+            <input type="radio" name="education" value="highSchool">highSchool
+        </label><br>
+        <label>
+            <input type="radio" name="education" value="UG">UG
+        </label><br>
+        <input type="radio" name="education" value="PG"> PG
+        </label><br>
+        <input type="radio" name="education" value="Doctorate"> Doctorate
+        </label><br>
+
+
+        <button type="button" onclick="checkEligibility()">show</button>
+    </form>
+    <p id="result">
+
+    </p>
+
+
+    <script>
+        function checkEligibility() {
+            // //Created a newlabel element
+            // const newLabel= document.createElement('label');
+
+            // //set attributes
+            // newLabel.setAttribute('for', 'IT');
+            // newLabel.innerText="Illiterate";
+            // document.body.appendChild(newLabel);
+
+            // //break element
+            // const brElement = document.createElement('br');
+            // document.body.appendChild(brElement);
+
+            var education = document.querySelector('input[name="education"]:checked').value;
+
+            var result = '';
+
+            switch (education) {
+                //  case "Illiterate": result = "NotEligible"; break;
+                //  case "highSchool": result = "Eligible"; break;
+                //  case "UG": result ="Eligible"; break;
+                //  case "PG": result = "Eligible"; break;
+                //  case "Doctorate": result = "NotEligible"; break;
+
+
+                case "highSchool":
+                case "UG": result = "Eligible for the job"; break;
+                case "PG":
+                case "Illiterate":
+                case "Doctorate": result = "Not Eligible for the job" ; break;
+                default: 'Not eligible for the job'; break;
+
+            }
+
+            //display the result
+            document.getElementById('result').innerText = result;
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

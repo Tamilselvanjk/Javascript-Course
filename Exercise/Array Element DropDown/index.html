@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecte Example</title>
+</head>
+<body>
+    <form>
+        <label for="department">Choose A Department:</label>
+        <select name="department" id="department">
+         <!--Option will be added here by JavaScript-->   
+        </select>
+    </form>
+
+    <script>
+       //define the array of department
+        let arr =["ECE","CSE","IT","EEE","AIDS"]
+
+        //Get the select element
+        var select = document.getElementById("department");
+
+
+     //Use a for loop to create option element from the array  
+    for( i=0 ; i < arr.length ; i++){
+
+        //Create a new option element
+        var option = document.createElement("option");
+
+        //set the value and text content of the option
+        option.value = arr[i];
+        option.textContent=arr[i];
+
+        //Append the option to the select element 
+        select.appendChild(option);
+          
+     }
+    
+        
+        </script>
+</body>
+</html>

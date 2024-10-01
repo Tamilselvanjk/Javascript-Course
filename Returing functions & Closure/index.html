@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colsure</title>
+</head>
+
+<body>
+    <script>
+        //Return function - higher order function
+        //lexical scoping - inner scope can access
+
+        //A closure is the combination of a function bundled together (enclosed)
+        //with reference to its sourrounding state(the lexical environment).
+
+        //In other words, a clusure give you access to an outer
+        //funtion's scop from an inner function
+
+        function outer(name) {
+            let outerVariable = "Banana"
+            function inner() {
+                let innerVariable = "mango"
+                console.log('inner Variable', innerVariable);
+                console.log('outer Variable ', outerVariable);
+                console.log('Hello', name);
+            }
+            return inner
+        }
+        let call1 = outer("Tamil")
+        call1()
+
+        let call2 = outer("Siva")
+        call2()
+        call1()
+
+        function makeAdder(x){
+            return function(y){
+                return x+y
+            }
+        } 
+        
+        let add5 = makeAdder(5)
+        console.log(add5(10));
+
+        let add100 = makeAdder(100)
+        console.log(add100(40));
+        console.log(add100(25));
+
+        console.log(add5(3));
+
+    </script>
+</body>
+
+</html>

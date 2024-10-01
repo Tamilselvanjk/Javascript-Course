@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Object</title>
+</head>
+<body>
+    <script>
+      let user = {
+        Name: 'siva',
+        price:2500,
+        quantity:1
+     }
+
+     console.log(user);
+
+    // adding new property
+       user.returanable = true;
+       console.log(user);
+
+    // Square bracket notation
+    console.log(user['price']);
+    user['returanable']=false
+
+    
+        let user1={
+            //property
+            Name:'Tamil',
+            password:'tamil@2004',
+            Email: 'tamiljk535@gmail.com',
+            
+            //Methods
+            login: function(){
+                console.log('add to login cart');
+            },
+            Register(){
+                console.log('add to register cart');
+                     
+            }
+            
+        }
+        console.log(user1);
+        user1.login()
+        user1.Register()
+        

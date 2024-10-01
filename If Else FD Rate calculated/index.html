@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+</head>
+<body>
+    <script>
+        // max of two number
+        let a=20 ,b=30;
+        let max
+        if(a>b)
+          max=a
+        else
+          max=b
+        console.log(max);  
+        //conditonal or ternary operator
+        max =a>b?a:b
+        console.log(max);
+
+           function isPalindrome(){   
+           //Remove non-alphanumeric character and convert to lowerCasae
+           const cleaned = str.replace(/[^a-zA-Z0-9]/g, ' ').toLowerCase();
+        
+           //check if cleaned string is equal to its reverse
+           return cleaned === str.split('').reverse().join('');
+          
+
+         } 
+
+         //Test case
+        const input1 = "was it a car or a cat i saw?" 
+        const input2 = "how are you" 
+
+         //conditional operator
+         const result1 = isPalindrome(input1)?
+         "palindrome" : "Not a palindrome";
+         const result2 = isPalindrome(input2)?
+         "palindrome" : "Not a palindrome";
+        
+        const result = document.getElementById('result');
+        console.log('input:'`'${input}'/nResult:${result1}` );
+        console.log(result2);
+
+        </script>
+    
+</body>
+</html>

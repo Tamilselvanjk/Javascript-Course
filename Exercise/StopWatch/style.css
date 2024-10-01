@@ -1,0 +1,75 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background-color:hsl(0 , 0% ,90%);
+}
+
+h1{
+    font-size: 2.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(0 , 0% ,25%);
+}
+
+#wrapper{
+    text-align: center;
+    width: 800px;
+    margin: 30px auto;
+}
+
+#stopwatch{
+    border: 4px solid black;
+    width: fit-content;
+    margin: auto;
+    padding: 30px;
+    border-radius: 50px ;
+    background-color:white;
+}
+#btn-start{
+    background-color:hsl(101, 100%, 40%)
+}
+#btn-start:hover{
+    background-color:hsl(101, 100%, 30%)
+}
+
+#btn-stop{
+    background-color:hsl(0, 100%, 50%);
+}
+#btn-stop:hover{
+    background-color:hsl(0, 100%, 40%);
+}
+
+#btn-reset{
+    background-color: hsl(197, 88%, 40%);
+}
+#btn-reset:hover{
+    background-color: hsl(197, 88%, 30%);
+}
+
+button{
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;    
+    border-radius: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.5;
+}
+    
+
+
+#stopwatch p{
+    font-size: 3rem;
+    font-family: monospace;
+    color: hsl(0 , 0% ,30%);
+    text-shadow: 2px 2px 2px hsla(0 , 0% ,0%,0.75);
+    margin-bottom: 25px;
+}
+
+
+

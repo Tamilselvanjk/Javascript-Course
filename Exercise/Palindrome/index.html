@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Palindrome checker</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Palindrome checker</h2>
+    
+    <div class="inputdiv">
+        <input type="text" id="inputString" placeholder="Enter a string">
+    </div>
+    <div>
+        <button type="sumbit" onclick="checkpolindorem()" >Calculate</button>
+    </div>
+
+    <p id="result">
+
+    </p>
+    </div>
+    <script>
+        function checkpolindorem(){
+         const inputEl = document.getElementById('inputString');
+         const resultEl = document.getElementById('result')
+
+        
+             const str = inputEl.value;
+             const cleanedStr =  str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+             let reversedStr = cleanedStr.split('').reverse().join('');
+
+             if (cleanedStr === reversedStr){
+                 resultEl.innerText=`input: ${str}: is a palindrome`;
+                 resultEl.style.color= "green";
+             }
+             else{
+                 resultEl.innerText=`input: ${str}: is a Not palindrome`;
+                 resultEl.style.color="red";
+             }  
+         }
+
+
+      
+
+
+    </script>
+</body>
+</html>q

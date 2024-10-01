@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator without button</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Calculator</h2>
+    
+    <div class="inputdiv">
+        <input type="text" id="input" placeholder="Enter expression like 5+9">
+    </div>
+    <div>
+        <button type="sumbit">Calculated</button>
+    </div>
+
+    
+    </div>
+    <script>
+        //New element added
+        let para =document.createElement('div');
+            para.id ='result';
+            let insert = document.getElementById('wrapper');
+            insert.appendChild(para)
+
+       //Event listener
+        let btn = document.querySelector('button');
+        btn.addEventListener('click',calculate)
+
+        function calculate(){   
+        const  input= document.getElementById("input").value;
+        const regex =/^(\d+)([+\-*/])(\d+)$/;
+        const match = input.match(regex);
+
+        if (match) {
+                //convert "5" to the number 5
+                const operand1 = parseFloat(match[1]);
+
+                //operator is "+"
+                const operator = match[2];
+
+                //convert "9" to the number 9
+                const operand2 = parseFloat(match[3]);
+                
+                //perform calculator based on operator
+                let result = 0;
+
+                switch (operator) {
+                    case '+': result = operand1 + operand2; break;
+                    case '-': result = operand1 - operand2; break;
+                    case '*': result = operand1 * operand2; break;
+                    case '/': result = operand1 / operand2; break;
+                    default: result = "Invalid operator";
+                }
+
+                document.getElementById('result').innerHTML =` Result: ${result}`;
+            } else {
+                document.getElementById('result').innerHTML = 'Invalid input format';
+            } 
+
+        }
+    
+
+
+
+             
+    
+    </script>
+</body>
+</html>
